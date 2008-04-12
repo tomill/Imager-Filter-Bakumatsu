@@ -101,7 +101,7 @@ This filter makes the photograph old likes taken in the Bakumatsu area.
   $img->filter(type => 'bakumatsu', overlay_image => '/foo/image.png');
 
 Overlay image to cover (it should have alpha channel). 
-defalut is: dist/share/BakumatsuTexture.png
+default is: dist/share/BakumatsuTexture.png
 
 =back
 
