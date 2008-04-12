@@ -24,3 +24,6 @@ META.yml
 README
 share/BakumatsuTexture.png
 t/00_compile.t
+t/01_filter.t
+t/sample-filterd.jpg
+t/sample.jpg

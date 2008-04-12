@@ -8,14 +8,14 @@ use File::ShareDir 'module_file';
 
 Imager->register_filter(
     type     => 'bakumatsu',
-    callsub  => \&bakumatsunize,
+    callsub  => \&bakumatsu_nize,
     callseq  => [],
     defaults => {
         overlay_image => module_file(__PACKAGE__, 'BakumatsuTexture.png'),
     },
 );
 
-sub bakumatsunize {
+sub bakumatsu_nize {
     my %opt  = @_;
     my $self = delete $opt{imager};
     my $work  = $self;
@@ -23,7 +23,7 @@ sub bakumatsunize {
     $work = $work->convert(
         matrix => [
             [ 1.7,   0,   0, 0 ], 
-            [   0, 1.7    0, 0 ], 
+            [   0, 1.7,   0, 0 ], 
             [   0,   0, 1.7, 0 ], 
         ],
     ); 
@@ -71,7 +71,7 @@ __END__
 
 =head1 NAME
 
-Imager::Filter::Bakumatsu -
+Imager::Filter::Bakumatsu - Photo vintage filter  
 
 =head1 SYNOPSIS
   
@@ -79,15 +79,31 @@ Imager::Filter::Bakumatsu -
   use Imager::Filter::Bakumatsu;
   
   my $img = Imager->new;
-  $img->read(file => 'photo.jpg');
+  $img->read(file => 'photo.jpg') or die $img->errstr;
   
-  $img->filter(type => 'bakumatsu');
+  $img->filter(type => 'bakumatsu'); # photo is made old.
   
-  $img->write(file => 'photo-bakumatsu.png');
+  $img->write(file => 'photo-bakumatsu.jpg')
+      or die $img->errstr;
 
 =head1 DESCRIPTION
 
-Imager::Filter::Bakumatsu is
+Bakumatsu (幕末) is a name of the 19th century middle in the history 
+of Japan. (L<http://en.wikipedia.org/wiki/Bakumatsu>) 
+This filter makes the photograph old likes taken in the Bakumatsu area.
+
+=head1 OPTIONS
+
+=over 4
+
+=item overlay_image
+
+  $img->filter(type => 'bakumatsu', overlay_image => '/foo/image.png');
+
+Overlay image to cover (it should have alpha channel). 
+defalut is: dist/share/BakumatsuTexture.png
+
+=back
 
 =head1 AUTHOR
 

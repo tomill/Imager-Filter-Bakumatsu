@@ -3,6 +3,11 @@ name 'Imager-Filter-Bakumatsu';
 all_from 'lib/Imager/Filter/Bakumatsu.pm';
 
 build_requires 'Test::More';
+build_requires 'File::Compare';
+build_requires 'File::Temp';
+
+requires 'Imager';
+
 use_test_base;
 install_share;
 auto_include;
