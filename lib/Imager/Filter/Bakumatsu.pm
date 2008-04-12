@@ -22,9 +22,9 @@ sub bakumatsunize {
     
     $work = $work->convert(
         matrix => [
-            [ 1.7, 0, 0, 0 ], 
-            [ 0, 1.7, 0, 0 ], 
-            [ 0, 0, 1.7, 0 ], 
+            [ 1.7,   0,   0, 0 ], 
+            [   0, 1.7    0, 0 ], 
+            [   0,   0, 1.7, 0 ], 
         ],
     ); 
     
@@ -44,10 +44,9 @@ sub bakumatsunize {
             [ 1 / 4, 1 / 2, 1 / 8, 0 ], 
             [ 1 / 4, 1 / 2, 1 / 8, 0 ], 
             [ 1 / 4, 1 / 2, 1 / 8, 0 ], 
-            [     0,     0,     0, 1 ],
         ],
     ); 
-
+    
     $work->rubthrough(
         src => do {
             my $overlay = Imager->new;
