@@ -1,5 +1,7 @@
 Changes
 inc/ExtUtils/MakeMaker.pm
+inc/File/Compare.pm
+inc/File/Temp.pm
 inc/Module/Install.pm
 inc/Module/Install/Base.pm
 inc/Module/Install/Can.pm

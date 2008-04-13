@@ -7,6 +7,7 @@ build_requires 'File::Compare';
 build_requires 'File::Temp';
 
 requires 'Imager';
+requires 'File::ShareDir';
 
 use_test_base;
 install_share;
