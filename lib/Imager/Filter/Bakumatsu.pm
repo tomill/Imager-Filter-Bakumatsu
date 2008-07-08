@@ -1,7 +1,7 @@
 package Imager::Filter::Bakumatsu;
 use strict;
 use warnings;
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 use Imager;
 use File::ShareDir 'module_file';
