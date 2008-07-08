@@ -18,34 +18,34 @@ Imager->register_filter(
 sub bakumatsu_nize {
     my %opt  = @_;
     my $self = delete $opt{imager};
-    my $work  = $self;
+    my $work = $self;
     
     $work = $work->convert(
         matrix => [
-            [ 1.7,   0,   0, 0 ], 
-            [   0, 1.7,   0, 0 ], 
-            [   0,   0, 1.7, 0 ], 
+            [ 1.7,   0,   0, 0 ],
+            [   0, 1.7,   0, 0 ],
+            [   0,   0, 1.7, 0 ],
         ],
-    ); 
+    );
     
     $work->filter(
-        type      => 'contrast', 
+        type      => 'contrast',
         intensity => 1.2,
-    ); 
+    );
     
     $work->filter(
-        type => 'autolevels', 
+        type => 'autolevels',
         lsat => 0.3,
         usat => 0.3,
     );
     
     $work = $work->convert(
         matrix => [
-            [ 1 / 4, 1 / 2, 1 / 8, 0 ], 
-            [ 1 / 4, 1 / 2, 1 / 8, 0 ], 
-            [ 1 / 4, 1 / 2, 1 / 8, 0 ], 
+            [ 1 / 4, 1 / 2, 1 / 8, 0 ],
+            [ 1 / 4, 1 / 2, 1 / 8, 0 ],
+            [ 1 / 4, 1 / 2, 1 / 8, 0 ],
         ],
-    ); 
+    );
     
     $work->rubthrough(
         src => do {
@@ -88,9 +88,9 @@ Imager::Filter::Bakumatsu - Photo vintage filter
 
 =head1 DESCRIPTION
 
-Bakumatsu (幕末) is a name of the 19th century middle in the history 
-of Japan. (L<http://en.wikipedia.org/wiki/Bakumatsu>) 
-This filter makes the photograph old likes taken in the Bakumatsu area.
+Bakumatsu (幕末) is a name of the 19th century middle in the history
+of Japan. (L<http://en.wikipedia.org/wiki/Bakumatsu>)
+This filter makes the photograph old likes taken in the Bakumatsu era.
 
 =head1 OPTIONS
 
@@ -120,5 +120,7 @@ Sample form: L<http://bakumatsu.koneta.org/>
 
 Original idea: L<http://labs.wanokoto.jp/olds>,
 L<http://d.hatena.ne.jp/nitoyon/20080407/bakumatsu_hack>
+
+L<http://coderepos.org/share/browser/lang/perl/Imager-Filter-Bakumatsu> (repository)
 
 =cut
