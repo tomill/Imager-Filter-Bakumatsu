@@ -8,9 +8,9 @@ build_requires 'File::Compare';
 build_requires 'File::Temp';
 
 requires 'Imager';
-requires 'File::ShareDir';
+requires 'File::ShareDir' => 1.00;
 
-install_share;
+install_share 'module', 'Imager::Filter::Bakumatsu', 'share';
 auto_include;
 
 WriteAll;

@@ -1,5 +1,8 @@
 Revision history for Perl extension Imager::Filter::Bakumatsu
 
+0.03  Mon May 17 19:16:53 JST 2010
+        - Fix install_share
+
 0.02  Tue Jul  8 21:37:53 JST 2008
         - fixed dependencies
         - fixed typo
