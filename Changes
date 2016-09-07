@@ -3,7 +3,7 @@ Revision history for Perl extension Imager::Filter::Bakumatsu
 {{$NEXT}}
 
 0.04 2016-09-07T16:09:56Z
-        - test fixed (use png instead of png)
+        - test fixed (use png instead of jpg)
         - re packaging, fix https://rt.cpan.org/Public/Bug/Display.html?id=117506
 
 0.03  Mon May 17 19:16:53 JST 2010
