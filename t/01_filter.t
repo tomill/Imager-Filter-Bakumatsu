@@ -20,4 +20,4 @@ $img->read(file => 't/sample.jpg') or die $img->errstr;
 $img->filter(type => 'bakumatsu');
 $img->write(file => $filename) or die $img->errstr;
 
-ok( File::Compare::compare('t/sample-filterd.jpg', $filename) == 0 );
+ok( File::Compare::compare('t/sample-filterd.jpg', $filename) == 0 , 'same output');
