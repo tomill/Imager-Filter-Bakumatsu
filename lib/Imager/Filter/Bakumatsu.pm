@@ -10,14 +10,14 @@ my $texture = dist_file('Imager-Filter-Bakumatsu', 'BakumatsuTexture.png');
 
 Imager->register_filter(
     type     => 'bakumatsu',
-    callsub  => \&bakumatsu_nize,
+    callsub  => \&vintage,
     callseq  => [],
     defaults => {
         overlay_image => $texture,
     },
 );
 
-sub bakumatsu_nize {
+sub vintage {
     my %opt  = @_;
     my $self = delete $opt{imager};
     my $work = $self;
@@ -118,11 +118,9 @@ it under the same terms as Perl itself.
 
 =head1 SEE ALSO
 
-Sample form: L<http://bakumatsu.koneta.org/>
-
 Original idea: L<http://labs.wanokoto.jp/olds>,
 L<http://d.hatena.ne.jp/nitoyon/20080407/bakumatsu_hack>
 
-L<http://coderepos.org/share/browser/lang/perl/Imager-Filter-Bakumatsu> (repository)
+Test Page: L<http://bakumatsu.koneta.org/>
 
 =cut
