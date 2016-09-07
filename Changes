@@ -1,5 +1,7 @@
 Revision history for Perl extension Imager::Filter::Bakumatsu
 
+{{$NEXT}}
+
 0.03  Mon May 17 19:16:53 JST 2010
         - Fix install_share
 
