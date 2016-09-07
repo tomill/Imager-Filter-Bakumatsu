@@ -3,15 +3,19 @@
 Imager::Filter::Bakumatsu - Photo vintage filter  
 
 # SYNOPSIS
+  
 
     use Imager;
     use Imager::Filter::Bakumatsu;
     
+
     my $img = Imager->new;
     $img->read(file => 'photo.jpg') or die $img->errstr;
     
+
     $img->filter(type => 'bakumatsu'); # photo is made old.
     
+
     $img->write(file => 'photo-bakumatsu.jpg')
         or die $img->errstr;
 
@@ -42,6 +46,6 @@ it under the same terms as Perl itself.
 # SEE ALSO
 
 Original idea: [http://labs.wanokoto.jp/olds](http://labs.wanokoto.jp/olds),
-[http://d.hatena.ne.jp/nitoyon/20080407/bakumatsu\_hack](http://d.hatena.ne.jp/nitoyon/20080407/bakumatsu_hack)
+[http://d.hatena.ne.jp/nitoyon/20080407/bakumatsu\_hack](http://d.hatena.ne.jp/nitoyon/20080407/bakumatsu\_hack)
 
 Test Page: [http://bakumatsu.koneta.org/](http://bakumatsu.koneta.org/)
