@@ -4,14 +4,16 @@ use warnings;
 our $VERSION = '0.03';
 
 use Imager;
-use File::ShareDir 'module_file';
+use File::ShareDir 'dist_file';
+
+my $texture = dist_file('Imager-Filter-Bakumatsu', 'BakumatsuTexture.png');
 
 Imager->register_filter(
     type     => 'bakumatsu',
     callsub  => \&bakumatsu_nize,
     callseq  => [],
     defaults => {
-        overlay_image => module_file(__PACKAGE__, 'BakumatsuTexture.png'),
+        overlay_image => $texture,
     },
 );
 
