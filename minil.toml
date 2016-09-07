@@ -1,6 +1,0 @@
-name = "Imager-Filter-Bakumatsu"
-# badges = ["travis"]
-authority="cpan:TOMITA"
-
-module_maker="ModuleBuildTiny"
-
