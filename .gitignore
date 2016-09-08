@@ -5,5 +5,9 @@
 /Build
 /Build.bat
 !Build/
+blib/
+MYMETA.*
+META.*
 !META.json
 !LICENSE
+minil.toml
