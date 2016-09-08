@@ -1,4 +1,5 @@
 .*
+!.travis.yml
 /Imager-Filter-Bakumatsu-*
 /.build
 /_build_params
