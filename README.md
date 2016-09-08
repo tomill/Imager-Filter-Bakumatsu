@@ -1,6 +1,6 @@
 # NAME
 
-Imager::Filter::Bakumatsu - Photo vintage filter  
+Imager::Filter::Bakumatsu - Photo vintage filter
 
 # SYNOPSIS
   
@@ -25,7 +25,11 @@ Bakumatsu (幕末) is a name of the 19th century middle in the history
 of Japan. ([http://en.wikipedia.org/wiki/Bakumatsu](http://en.wikipedia.org/wiki/Bakumatsu))
 This filter makes the photograph old likes taken in the Bakumatsu era.
 
-# OPTIONS
+# FILTER
+
+## bakumatsu
+
+    $img->filter(type => 'bakumatsu');
 
 - overlay\_image
 
