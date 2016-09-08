@@ -10,14 +10,14 @@ my $texture = dist_file('Imager-Filter-Bakumatsu', 'BakumatsuTexture.png');
 
 Imager->register_filter(
     type     => 'bakumatsu',
-    callsub  => \&vintage,
+    callsub  => \&bakumatsu,
     callseq  => [],
     defaults => {
         overlay_image => $texture,
     },
 );
 
-sub vintage {
+sub bakumatsu {
     my %opt  = @_;
     my $self = delete $opt{imager};
     my $work = $self;
@@ -73,7 +73,7 @@ __END__
 
 =head1 NAME
 
-Imager::Filter::Bakumatsu - Photo vintage filter  
+Imager::Filter::Bakumatsu - Photo vintage filter
 
 =head1 SYNOPSIS
   
@@ -94,7 +94,11 @@ Bakumatsu (幕末) is a name of the 19th century middle in the history
 of Japan. (L<http://en.wikipedia.org/wiki/Bakumatsu>)
 This filter makes the photograph old likes taken in the Bakumatsu era.
 
-=head1 OPTIONS
+=head1 FILTER
+
+=head2 bakumatsu
+
+  $img->filter(type => 'bakumatsu');
 
 =over 4
 
@@ -122,5 +126,7 @@ Original idea: L<http://labs.wanokoto.jp/olds>,
 L<http://d.hatena.ne.jp/nitoyon/20080407/bakumatsu_hack>
 
 Test Page: L<http://bakumatsu.koneta.org/>
+
+=for stopwords 19th bakumatsu
 
 =cut
