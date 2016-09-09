@@ -14,6 +14,10 @@ if (grep { /png/ } keys %Imager::formats) {
     plan skip_all => "test needs Imager that supports png format.";
 }
 
+if ($^O eq 'MSWin32') {
+    plan skip_all => "sorry this test is not support windows.";
+}
+
 my ($fh, $filename) = tempfile(UNLINK => 1, SUFFIX => '.png');
 
 my $img = Imager->new;
